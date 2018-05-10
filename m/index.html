@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" name="viewport">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta content="date=no" name="format-detection">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+
+    <link rel="image_src" type="image/jpeg" href="../images/logo.png" />
+
+    <title>挖媒</title>
+    <meta name="description" content="挖媒" />
+    <meta name="keywords" content="挖媒" />
+    <link rel="stylesheet" type="text/css" href="../stylesheets/m.css">
+
+</head>
+<body>
+    <div id="app">
+        <section class="base-container">
+            <div class="m-header">
+                <div class="logo"><h1>挖媒</h1></div>
+            </div>
+            <p class="m-label">
+                <i class="i-m2"></i>今日兑换时间： <span id="sellTime">--</span>
+            </p>
+            <div class="m-boxs">
+                <div class="item left">
+                    <label for="">累计派送广告</label>
+                    <h3 id="totalAmount">--</h3>
+                </div>
+                <div class="item right">
+                    <label for="">今日媒池</label>
+                    <h3 id="todayAmount">--</h3>
+                </div>
+            </div>
+            <div class="m-chart clearfix">
+                <div class="title">
+                    <label for="">媒池和媒量历史兑换 </label>
+                    <span>预计今日媒价<span id="coinPrice">--</span>元</span>
+                </div>
+                <div class="content">
+                    <canvas id="canvas"></canvas>
+                </div>
+            </div>
+            <div class="m-label-box">
+                <p><i class="i-m1"></i>神器：  <span id="deviceId">--</span></p>
+            </div>
+            <div class="m-list-items clearfix">
+                <div class="item i1">
+                    <i id="totalCount">--</i>
+                    <span>累积媒量</span>
+                    <div class="hr"></div>
+                </div>
+                <div class="item i2">
+                    <i id="todayTotalCount">--</i>
+                    <span>今日挖媒</span>
+                    <div class="hr"></div>
+                </div>
+                <div class="item i3">
+                    <i id="coinExchange">--</i>
+                    <span>可兑换</span>
+                    <div class="hr"></div>
+                </div>
+            </div>
+            <div class="m-btn-box">
+                <a href="form.html" class="btn">兑换（今日兑换时间：<span id="coinExchangeTime">--</span>）</a>
+            </div>
+        </section>
+    </div>
+</body>
+<script src="../dist/jquery-3.3.1.min.js"></script>
+<script src="../javascript/utils.js"></script>
+<script src="../dist/chart.js"></script>
+<script src="../javascript/m_home.js"></script>
+<script>
+  var id = '6CCC2EFD4CA889267FF19E5FE5CFC15E';
+</script>
+</html>

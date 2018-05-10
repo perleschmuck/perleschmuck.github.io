@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+    <link rel="image_src" type="image/jpeg" href="./images/logo.png"/>
+
+    <title>挖媒</title>
+
+    <meta name="description" content="挖媒"/>
+    <meta name="keywords" content="挖媒"/>
+    <script src="../javascript/iconfont.js"></script>
+    <link rel="stylesheet" type="text/css" class="ui" href="../dist/semantic.min.css">
+
+    <link rel="stylesheet" type="text/css" href="../stylesheets/style.css?_=123">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/mobile_style.css?_=1223" media="screen and (max-width:1024px)">
+    <script src="../dist/jquery-3.3.1.min.js"></script>
+    <script src="../dist/semantic.min.js"></script><script src="../javascript/comm.js"></script>
+    <script src="../javascript/comm.js"></script>
+    <script src="../javascript/menu.js"></script>
+    <script src="../javascript/orderFind.js?_=123"></script>
+</head>
+<body id="help">
+
+<div class="header">
+    <div class="ui container">
+        <div class="item">
+            <i id="menuBtn" class="iconfont icon-shouyedaohangicon"></i>
+        </div>
+        <div class="item">
+            <div class="ui logo shape">
+                <div class="sides">
+                    <div class="active ui side">
+                        <a href="../index.html"><img class="ui image" src="../images/logo.png"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="center menu">
+                <ul>
+                    <li><a href="../index.html">首页</a></li>
+                    <li><a href="../product.html">挖媒神器</a></li>
+                    <li><a href="../advert.html">广告招募</a></li>
+                    <li><a href="../more.html">了解更多</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="item">
+            <div class="right menu">
+                <ul>
+                    <li>
+                        <i class="i-call"></i>
+                        <span id="hotTel">热线： &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    </li>
+                    <li>
+                        <span id="sellTime">开抢时间 --</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="ui top thin sidebar inverted vertical menu">
+        <!--<a class="item" href="javascript:;">&nbsp;</a>-->
+        <a class="item" href="../index.html">首页</a>
+        <a class="item" href="../product.html">挖煤神器</a>
+        <a class="item" href="../advert.html">广告招募</a>
+        <a class="item" href="../more.html">了解更多</a>
+    </div>
+</div>
+
+<div class="main">
+    <div class="ui container">
+        <div class="ui grid">
+            <div class="four wide column">
+                <div class="menu-title">
+                    <h3>了解更多</h3>
+                </div>
+
+                <div id="menu" class="clearfix">
+                    <div class="navBox">
+                        <ul>
+                            <li>
+                                <h2 class="obtain">学习中心<i></i></h2>
+                                <div class="secondary">
+                                    <a href="study_buy.html">购买流程</a>
+                                    <a href="study_active.html">激活挖媒神器</a>
+                                </div>
+                            </li>
+                            <li>
+                                <h2 class="obtain">关于我们<i></i></h2>
+                                <div class="secondary">
+                                    <a href="about_company.html">公司介绍</a>
+                                    <a href="about_standard.html">投放规范</a>
+                                    <a href="about_disclaimer.html">免责声明</a>
+                                </div>
+                            </li>
+                            <li>
+                                <h2 class="obtain">媒体中心<i></i></h2>
+                                <div class="secondary">
+                                    <a href="media_notice.html">活动动态</a>
+                                    <a href="media_news.html">挖媒新闻</a>
+                                    <a href="media_presell.html">预售信息</a>
+                                </div>
+                            </li>
+                            <li>
+                                <h2 class="obFocus">服务支持<i class="arrowRot"></i></h2>
+                                <div class="secondary" style="height: 200px;">
+                                    <a href="service_issue.html">常见问题</a>
+                                    <a href="service_flow.html">售后流程</a>
+                                    <a class="seconFocus">订单查询</a>
+                                </div>
+                            </li>
+                            <li>
+                                <h2 class="obtain">关注我们<i></i></h2>
+                                <div class="secondary">
+                                    <a href="follow_weibo.html">官方微博</a>
+                                    <a href="follow_weixin.html">官方微信</a>
+                                    <a href="follow_tencent.html">官方公众号</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="twelve wide column order-form">
+                <div class="content">
+                    <h3 class="title">订单查询</h3>
+                    <div class="ui two column centered grid">
+                        <div class="column">
+                            <form id="orderSearchForm" class="order_search_form ui form" onsubmit="javascript:;">
+                                <div class="inline field">
+                                    <label>电话：</label><input type="text" name="mobile" placeholder="请输入您要查询订单的电话号码">
+                                </div>
+                                <div class="inline fields">
+                                    <label>验证码：</label><div class="six wide field">
+                                        <input type="text" name="code" placeholder="输入验证码">
+                                    </div>
+                                    <div class="four wide field">
+                                        <a class="img-code" href="javascript:;" id="changeVcode"><img id="imgCode" src="http://wx.888l.com/api/captcha" alt=""></a>
+                                    </div>
+                                </div>
+                                <p id="imgCodeInfo" class="error-info"></p>
+                                <button id="checkingBtn" class="ui button">提交</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="orderViewBox">
+
+                </div>
+
+                <!--<div class="order-view">-->
+                    <!--<div class="order-title">2323</div>-->
+                    <!--<ul>-->
+                        <!--<li>-->
+                            <!--<span>商品名</span>-->
+                            <!--<span>123</span>-->
+                        <!--</li>-->
+                        <!--<li>232</li>-->
+                        <!--<li>3434</li>-->
+                        <!--<li>545</li>-->
+                        <!--<li>45</li>-->
+                        <!--<li>656</li>-->
+                        <!--<li>565</li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="ui modal small phone-code-modal" id="phoneCodeModal">
+    <div id="phoneCodeModalCloseBtn" class="close icon">
+        <img src="../images/common/icon-lose.png" alt="">
+    </div>
+    <form id="phoneCodeModalForm" class="content">
+        <h1>输入手机验证码</h1>
+        <input name="code" placeholder="请输入手机验证码" type="text">
+        <p id="phoneCodeInfo" class="error-info"></p>
+        <p>温馨提示：请认准官方微信(wamei001)</p>
+        <button>确认</button>
+    </form>
+</div>
+
+<div class="footer">
+    <div class="ui container">
+        <div class="ui stackable inverted grid">
+            <div class="two wide column">
+                <h4 class="ui inverted title">关于我们<i>+</i></h4>
+                <div class="ui inverted link list">
+                    <a class="item" href="./about_company.html" target="_blank">公司介绍</a>
+                    <a class="item" href="./about_standard.html" target="_blank">投放规范</a>
+                    <a class="item" href="./about_disclaimer.html" target="_blank">免责声明</a>
+                </div>
+            </div>
+            <div class="two wide column">
+                <h4 class="ui inverted title">媒体中心<i>+</i></h4>
+                <div class="ui inverted link list">
+                    <a class="item" href="./media_notice.html" target="_blank">最新公告</a>
+                    <a class="item" href="./media_news.html" target="_blank">挖媒新闻</a>
+                    <a class="item" href="./media_presell.html" target="_blank">预售信息</a>
+                </div>
+            </div>
+            <div class="two wide column">
+                <h4 class="ui inverted title">服务支持<i>+</i></h4>
+                <div class="ui inverted link list">
+                    <a class="item" href="./service_issue.html" target="_blank">常见问题</a>
+                    <a class="item" href="./service_flow.html" target="_blank">售后流程</a>
+                    <a class="item" href="./service_order_search.html" target="_blank">订单查询</a>
+                </div>
+            </div>
+            <div class="two wide column">
+                <h4 class="ui inverted title">关注我们<i>+</i></h4>
+                <div class="ui inverted link list">
+                    <a class="item" href="./follow_weibo.html" target="_blank">官方微博</a>
+                    <a class="item" href="./follow_weixin.html" target="_blank">官方微信</a>
+                    <a class="item" href="./follow_tencent.html" target="_blank">官方公众号</a>
+                </div>
+            </div>
+            <div class="six wide right floated column">
+                <div class="item center">
+                    <p>服务时间：9:00 -18:00</p>
+                    <h4 id="tel">400-000-0000</h4>
+                    <a class="ui basic button" id="liveQQ" href="" target="_blank">
+                        <i class="i-call-b"></i>
+                        在线咨询
+                    </a>
+                </div>
+                <div class="item right">
+                    <div class="ui small image qrcode">
+                        <img src="../images/cq.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ui inverted section divider"></div>
+        <p class="copyright">Copyright&copy;2018 88v.com All Rights ReservedICP备 0000000号-0    法律声明</p>
+    </div>
+</div>
+</body>
+</html>

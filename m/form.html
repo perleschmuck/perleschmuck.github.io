@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" name="viewport">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta content="date=no" name="format-detection">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+
+    <link rel="image_src" type="image/jpeg" href="../images/logo.png" />
+
+    <title>挖媒</title>
+    <meta name="description" content="挖媒" />
+    <meta name="keywords" content="挖媒" />
+    <link rel="stylesheet" type="text/css" class="ui" href="../dist/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/m.css">
+
+</head>
+<body>
+    <div id="app">
+        <div class="base-container">
+            <div class="m-header">
+                <a href="index.html" class="i-m-back back"></a>
+                <div class="logo"><h1>挖媒</h1></div>
+            </div>
+            <form id="exchangeForm" class="m-form clearfix">
+                <div class="field clearfix">
+                    <label>当前可兑换媒：</label>
+                    <span>枚</span>
+                    <span id="coinExchange">--</span>
+                    <!--<input id="" type="text" name="" placeholder="">-->
+                </div>
+                <div class="field clearfix">
+                    <label>当前兑换价格：</label>
+                    <span>元/枚</span>
+                    <span id="coinPrice">--</span>
+                    <!--<input type="text" name="" placeholder="">-->
+                </div>
+                <div class="field clearfix">
+                    <label>兑换数量：</label>
+                    <span>枚</span>
+                    <input type="number" name="count" placeholder="请输入兑换数量">
+                </div>
+                <div class="field clearfix">
+                    <label>提现到：</label>
+                    <span>微信</span>
+                    <!--<input type="text" name="" placeholder="">-->
+                </div>
+                <div class="field center">
+                    <p class="err-msg" id="errMsg"></p>
+                    <button class="btn">提交</button>
+                    <p>转账可能会有延时，如果24小时内没到账，请及时联系客服</p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="ui modal small exchange-success" id="exchangeSuccessModal">
+        <div class="header">
+            兑换成功
+        </div>
+        <div class="image content">
+            <div class="description">
+                恭喜你兑换成功！
+            </div>
+        </div>
+        <div class="actions">
+            <a href="./index.html" class="ui button primary">完成</a>
+        </div>
+    </div>
+
+    <script src="../dist/jquery-3.3.1.min.js"></script>
+    <script src="../dist/semantic.min.js?_=123"></script>
+    <script src="../javascript/m_form.js?_=123"></script>
+    <script>
+      var id = '';
+    </script>
+</body>
+</html>
