@@ -2,9 +2,7 @@
  * Created by Grey on 2018/3/29.
  */
 $(function () {
-  var baseUrl = 'http://dev.wamei.com/api/web';
-  // var baseUrl = 'http://wx.888l.com/api/web';
-  // var baseUrl = 'http://test.888l.com/api/web';
+  var baseUrl = 'http://wx.888l.com/api/web';
   var imgUrl = 'http://wx.888l.com';
 
   window.baseUrl = baseUrl;
@@ -27,7 +25,7 @@ $(function () {
       $('#sellTime').text('开抢时间 ' + data.item_selling_time);
     },
     error: function (error) {
-      console.log(error, '请求错误！')
+      // console.log(error, '请求错误！')
     },
     beforeSend: function () {
       if (lock && req) {

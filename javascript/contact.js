@@ -3,7 +3,7 @@
  */
 !function ($) {
   $(function () {
-    var baseUrl = 'http://test.888l.com/api/web';
+    var baseUrl = 'http://wx.888l.com/api/web';
     var modalAction = function () {
       $('.ui.modal .button').click(function () {
         $('.ui.modal').modal('hide')
@@ -72,7 +72,7 @@
 
     var pageName = getPageName();
 
-    console.log('pageName: ', pageName);
+    // console.log('pageName: ', pageName);
 
     $("#reservationBtn").on("click", function (event) {
       //提交预约
@@ -96,7 +96,7 @@
               _modalAction.show();
             },
             error: function (error) {
-              console.log(error, '请求错误！')
+              // console.log(error, '请求错误！')
             },
             beforeSend: function () {
               if (lock && req) {

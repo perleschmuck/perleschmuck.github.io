@@ -176,7 +176,7 @@
     </div>
     <div class="content">
         <h1>请扫码支付</h1>
-        <img src="images/common/er-code.jpg" alt="">
+        <img id="payQrcode" src="images/common/er-code.jpg" alt="">
         <div class="price" id="totalPrice">￥2312</div>
         <div class="refresh"><img src="images/common/refresh.png" alt="">刷新</div>
         <p>温馨提示：请认准官方微信(wamei001)</p>
@@ -184,11 +184,11 @@
 </div>
 
 <div class="ui modal small payment-success" id="paymentSuccessModal">
-    <div class="header">
+    <div class="header" id="paymentSuccessModal-header">
         支付成功
     </div>
     <div class="image content">
-        <div class="description">
+        <div class="description" id="paymentSuccessModal-content">
             恭喜你支付成功！
         </div>
     </div>

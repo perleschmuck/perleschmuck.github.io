@@ -4436,14 +4436,15 @@ body .header {
 }
 
 .ui.modal.payment .content img {
-    width: 220px;
-    margin-top: 45px;
+    /*width: 240px;*/
+    height: 240px;
+    /*margin-top: 45px;*/
 }
 
 .ui.modal.payment .content .price {
     color: #f3101b;
     font-size: 26px;
-    margin-top: 15px;
+    /*margin-top: 15px;*/
 }
 
 .ui.modal.payment .content .refresh {
@@ -4454,6 +4455,7 @@ body .header {
 
 .ui.modal.payment .content .refresh img {
     width: 16px;
+    height: auto;
     position: relative;
     top: -2px;
     margin-right: 5px;

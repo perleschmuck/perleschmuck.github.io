@@ -4,6 +4,24 @@
 !function ($) {
   new PCAS("P", "C");
   $(function () {
+    var baseUrl = 'http://wx.888l.com/api/web';
+    var qrcodeHost = 'http://wx.888l.com';
+    var modalAction = function () {
+      $('#orderCloseBtn').click(function () {
+        $('#paymentModal').modal('hide');
+        // window.location.reload()
+      });
+      return {
+        show: function (price, qrcode) {
+          $('#totalPrice').text(price || '--');
+          $('#payQrcode').attr('src', qrcodeHost + qrcode);
+          $('#paymentModal').modal('show');
+        }
+      }
+    };
+
+    var _modalAction = modalAction();
+
     window.fetchGoodsInfo(function (data) {
       var price = data.price;
       $('#price').text('￥' + price);
@@ -23,27 +41,8 @@
         $('#price').text('￥' + num * price)
       })
     });
-    // $('#paymentModal').modal('show')
 
-    var modalAction = function () {
-      $('#orderCloseBtn').click(function () {
-        $('#paymentModal').modal('hide');
-        // window.location.reload()
-      });
-      return {
-        show: function (price) {
-          $('#totalPrice').text(price || '--');
-          $('#paymentModal').modal('show');
-        }
-      }
-    };
-    // $('#paymentSuccessModal').modal('show');
-    $('#paymentSuccessModal .button').click(function () {
-      window.location.reload();
-    });
-    var _modalAction = modalAction();
-    var baseUrl = 'http://test.888l.com/api/web';
-    $("#orderSubmitBtn").on("click", function () {
+    $("#orderSubmitBtn").click(function () {
       //提交订单
       $("#orderForm").form({
         on: 'blur',
@@ -112,25 +111,30 @@
             "remark": fields.remark,
             "goods_id": 1,
             "goods_count": fields.goods_count
-          }
-          console.log(datas, '提交数据')
+          };
+          // console.log(datas, '提交数据')
           fetchCreateOrder(datas)
         }
       })
     });
 
+    var loopFetchOrderIsSuccess = function () {};
+
     function fetchCreateOrder (datas) {
-      var lock = false
+      var lock = false;
       var req = $.ajax({
         type: "POST",
         url: baseUrl + "/orders/create",
         data: JSON.stringify(datas),
         success: function (data) {
-          console.log(data, '----data')
-          _modalAction.show($('#price').text())
+          _modalAction.show($('#price').text(), data.qrcode_url);
+          loopFetchOrderIsSuccess = setInterval(function () {
+            fetchOrderIsSuccess(data.order_id);
+          }, 1000);
+
         },
         error: function (error) {
-          console.log(error, '请求错误！')
+          // console.log(error, '请求错误！')
         },
         beforeSend: function () {
           if (lock && req) {
@@ -143,6 +147,39 @@
         }
       });
     }
+
+    function fetchOrderIsSuccess (orderId) {
+      var paymentSuccessModalHeader = $('#paymentSuccessModal-header');
+      var paymentSuccessModalContent = $('#paymentSuccessModal-content');
+      var paymentSuccessModal = $('#paymentSuccessModal');
+      $.ajax({
+        type: 'GET',
+        url: baseUrl + '/orders/status/' + orderId,
+        success: function (response) {
+          if (response && response.status && response.status === 'WaitDelivering') {
+            paymentSuccessModalHeader.text('支付成功');
+            paymentSuccessModalContent.text('恭喜你支付成功！');
+            paymentSuccessModal.modal('show');
+            clearInterval(loopFetchOrderIsSuccess)
+          } else if (response.status !== 'WaitPaying') {
+            paymentSuccessModalHeader.text('支付异常');
+            paymentSuccessModalContent.text('支付异常, 请查询订单');
+            paymentSuccessModal.modal('show');
+            clearInterval(loopFetchOrderIsSuccess)
+          }
+        },
+        error: function () {
+          paymentSuccessModalHeader.text('支付异常');
+          paymentSuccessModalContent.text('服务端异常');
+          paymentSuccessModal.modal('show');
+          clearInterval(loopFetchOrderIsSuccess)
+        }
+      })
+    }
+
+    $('#paymentSuccessModal .button').click(function () {
+      window.location.href = '/wamei_static/help/service_order_search.html'
+    });
 
   })
 }(window.jQuery)
