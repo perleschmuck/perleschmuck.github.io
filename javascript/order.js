@@ -10,13 +10,14 @@
       $('#orderCloseBtn').click(function () {
         $('#paymentModal').modal('hide');
           clearInterval(loopFetchOrderIsSuccess)
-        // window.location.reload()
       });
       return {
         show: function (price, qrcode) {
           $('#totalPrice').text(price || '--');
           $('#payQrcode').attr('src', qrcodeHost + qrcode);
-          $('#paymentModal').modal('show');
+          $('#paymentModal')
+              .modal('setting', 'closable', false)
+              .modal('show');
         }
       }
     };
@@ -165,14 +166,18 @@
           } else if (response.status !== 'WaitPaying') {
             paymentSuccessModalHeader.text('支付异常');
             paymentSuccessModalContent.text('支付异常, 请查询订单');
-            paymentSuccessModal.modal('show');
+            paymentSuccessModal
+                .modal('setting', 'closable', false)
+                .modal('show');
             clearInterval(loopFetchOrderIsSuccess)
           }
         },
         error: function () {
           paymentSuccessModalHeader.text('支付异常');
           paymentSuccessModalContent.text('服务端异常');
-          paymentSuccessModal.modal('show');
+          paymentSuccessModal
+              .modal('setting', 'closable', false)
+              .modal('show');
           clearInterval(loopFetchOrderIsSuccess)
         }
       })
