@@ -9,6 +9,7 @@
     var modalAction = function () {
       $('#orderCloseBtn').click(function () {
         $('#paymentModal').modal('hide');
+          clearInterval(loopFetchOrderIsSuccess)
         // window.location.reload()
       });
       return {
@@ -178,7 +179,7 @@
     }
 
     $('#paymentSuccessModal .button').click(function () {
-      window.location.href = '/wamei_static/help/service_order_search.html'
+      window.location.href = '/help/service_order_search.html'
     });
 
   })
