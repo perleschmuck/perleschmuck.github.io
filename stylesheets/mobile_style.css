@@ -275,7 +275,7 @@
     /*padding-top: 60px;*/
     /*height: auto;*/
     /*background-size: 100%;*/
-    /*background-image: url("../images/_advert/s1-5.jpg");*/
+    /*background-image: url("../images/propagandize/s1-5.jpg");*/
     /*background-repeat: repeat;*/
     /*background-position: left top;*/
     /*background-size: 100%;*/
@@ -284,7 +284,7 @@
 
 /*#advert .section-1  .container {*/
     /*height: auto;*/
-    /*!*background-image: url(../images/_advert/s1-4.jpg);*!*/
+    /*!*background-image: url(../images/propagandize/s1-4.jpg);*!*/
     /*!*background-size: 100%;*!*/
     /*!*background-repeat: no-repeat;*!*/
 /*}*/
@@ -717,6 +717,13 @@ body {
 }
 .introduction .item .ui.ad {
     margin: 0 10px;
+    width: 30%;
+}
+.introduction .item .ui.ad h3 {
+    font-size: 26px !important
+}
+.introduction .item .ui.ad p {
+    font-size: 12px !important
 }
 .masthead .chart .ui.card {
     width: 100%;
@@ -774,7 +781,7 @@ body {
     padding-top: 60px;
     height: auto;
     background-size: 100%;
-    background-image: url("../images/_advert/s1-5.jpg");
+    background-image: url("../images/propagandize/s1-5.jpg");
     background-repeat: repeat;
     background-position: left top;
     background-size: 100%;
@@ -783,7 +790,7 @@ body {
 
 #advert .section-1  .container {
     height: auto;
-    /*background-image: url(../images/_advert/s1-4.jpg);*/
+    /*background-image: url(../images/propagandize/s1-4.jpg);*/
     /*background-size: 100%;*/
     /*background-repeat: no-repeat;*/
 }
@@ -833,7 +840,7 @@ body {
 #advert .section-4 {
     padding: 60px 0;
     text-align: center;
-    background-image: url("../images/_advert/s4-bg-mobile.jpg");
+    background-image: url("../images/propagandize/s4-bg-mobile.jpg");
 }
 #advert .section-4 ul {
     display: -webkit-box;

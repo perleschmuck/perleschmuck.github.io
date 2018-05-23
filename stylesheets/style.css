@@ -1520,7 +1520,7 @@
 
 /*!*product*!*/
 
-/*!*_advert*!*/
+/*!*propagandize*!*/
 /*#advert h2,*/
 /*#advert h1 {*/
     /*font-size: 30px;*/
@@ -1550,7 +1550,7 @@
 /*}*/
 
 /*#advert .section-1 {*/
-    /*background-image: url("../images/_advert/s1-1.jpg");*/
+    /*background-image: url("../images/propagandize/s1-1.jpg");*/
     /*background-repeat: no-repeat;*/
     /*background-size: cover;*/
     /*background-position: center;*/
@@ -1723,7 +1723,7 @@
     /*animation: right-enter 1.5s ease-out forwards 1s;*/
 /*}*/
 
-/*!*#_advert .section-3.animation .text {*!*/
+/*!*#propagandize .section-3.animation .text {*!*/
 /*!*animation: right-enter 1s ease-out forwards;*!*/
 /*!*}*!*/
 /*#advert .section-3.animation img {*/
@@ -1731,7 +1731,7 @@
 /*}*/
 
 /*#advert .section-4 {*/
-    /*background-image: url("../images/_advert/s4-bg.jpg");*/
+    /*background-image: url("../images/propagandize/s4-bg.jpg");*/
     /*background-size: cover;*/
     /*background-position: center;*/
     /*text-align: center;*/
@@ -1840,7 +1840,7 @@
     /*background-color: #e0b336;*/
 /*}*/
 
-/*!*_advert*!*/
+/*!*propagandize*!*/
 
 /*!* -----order----- *!*/
 /*#order .main {*/
@@ -2188,7 +2188,12 @@ body .header {
 
 .introduction .item .ui.ad {
     display: inline-block;
-    margin: 0 20px;
+    /*margin: 0 20px;*/
+}
+.introduction .item .ui.ad:first-child,
+.introduction .item .ui.ad:last-child {
+    width: 200px;
+    margin: 0;
 }
 
 .introduction .item .ui.ad h3 {
@@ -3841,7 +3846,7 @@ body .header {
 
 /*product*/
 
-/*_advert*/
+/*propagandize*/
 #advert h2,
 #advert h1 {
     font-size: 30px;
@@ -3877,7 +3882,7 @@ body .header {
 }
 
 #advert .section-1 {
-    background-image: url("../images/_advert/s1-1.jpg");
+    background-image: url("../images/propagandize/s1-1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -4124,7 +4129,7 @@ body .header {
     animation: right-enter 1.5s ease-out forwards 1s;
 }
 
-/*#_advert .section-3.animation .text {*/
+/*#propagandize .section-3.animation .text {*/
 /*animation: right-enter 1s ease-out forwards;*/
 /*}*/
 #advert .section-3.animation img {
@@ -4133,7 +4138,7 @@ body .header {
 }
 
 #advert .section-4 {
-    background-image: url("../images/_advert/s4-bg.jpg");
+    background-image: url("../images/propagandize/s4-bg.jpg");
     background-size: cover;
     background-position: center;
     text-align: center;
@@ -4291,7 +4296,7 @@ body .header {
     background-color: #e0b336;
 }
 
-/*_advert*/
+/*propagandize*/
 
 /* -----order----- */
 #order .main {
