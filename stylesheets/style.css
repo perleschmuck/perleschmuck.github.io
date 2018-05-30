@@ -66,8 +66,8 @@
 /*}*/
 
 /*#more .header .item .menu ul li a[href="more.html"],*/
-/*#product .header .item .menu ul li a[href="product.html"],*/
-/*#home .header .item .menu ul li a[href="index.html"],*/
+/*#product .header .item .menu ul li a[href="index.html"],*/
+/*#home .header .item .menu ul li a[href="data.html"],*/
 /*#advert .header .item .menu ul li a[href="advert.html"],*/
 /*.header .item .menu ul li a:hover {*/
     /*color: #e2b329;*/
@@ -2048,7 +2048,7 @@ body .header {
     background-color: #121b23;
     display: block;
     width: 100%;
-
+    overflow: hidden;
 }
 
 .header .item:first-child {
@@ -2085,12 +2085,13 @@ body .header {
 }
 
 .header .item .center.menu {
-    margin-left: 130px;
+    margin-left: 35px;
 }
 
 .header .item .menu ul {
     margin: 0;
     list-style: none;
+    padding: 0;
 }
 
 .header .item .menu ul li {
@@ -2109,9 +2110,25 @@ body .header {
     transition: color .2s linear;
 }
 
+.header .item .menu ul li.ui-btn {
+    display: inline-block;
+    background-color: #e2b440;
+    border-radius: 3px;
+}
+
+.header .item .menu ul li.ui-btn {
+    display: inline-block;
+    height: 100%;
+    width: 100px;
+}
+
+.header .item .menu ul li.ui-btn a:hover {
+    color: #fff;
+}
+
 #more .header .item .menu ul li a[href="more.html"],
-#product .header .item .menu ul li a[href="product.html"],
-#home .header .item .menu ul li a[href="index.html"],
+#product .header .item .menu ul li a[href="index.html"],
+#home .header .item .menu ul li a[href="data.html"],
 #advert .header .item .menu ul li a[href="advert.html"],
 .header .item .menu ul li a:hover {
     color: #e2b329;
@@ -2131,7 +2148,7 @@ body .header {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
     background: #313e59;
-    height: 770px;
+    height: 500px;
     display: block;
     position: absolute;
     width: 100%;
@@ -2165,6 +2182,7 @@ body .header {
 
 .introduction {
     text-align: center;
+    height: 500px;
 }
 
 .introduction h1.ui.inverted {

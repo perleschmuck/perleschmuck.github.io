@@ -58,7 +58,7 @@ $(function () {
     var chart = new Chart(ctx, config);
     return chart;
   }
-  var chart = initChart();
+  // var chart = initChart();
 
   function toThousands (num) {
     var num = (num || 0).toString(), result = '';
@@ -80,7 +80,7 @@ $(function () {
     chart.data.labels = daily.labels;
     chart.data.datasets[0].data = daily.amount;
     chart.data.datasets[1].data = daily.coin;
-    chart.update();
+    // chart.update();
   }
 
   $.get(baseUrl + '/home', renderData);
