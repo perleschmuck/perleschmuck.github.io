@@ -460,10 +460,10 @@ body {
     width: 100%;
 }
 .pc {
-    display: none;
+    display: none !important;
 }
 .mobile {
-    display: block;
+    display: block !important;
 }
 /*.header {*/
 /*overflow: hidden;*/
@@ -540,6 +540,7 @@ body {
 #product .section-1 {
     height: auto;
     position: relative;
+    padding-bottom: 30px;
 }
 #product .section-1 .product-imgs {
     display: -webkit-box;
@@ -550,30 +551,46 @@ body {
     -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
     height: auto;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 #product .section-1 .product-imgs div {
     display: block;
+    position: static !important;
     width: 100%;
+}
+#product .section-1 .product-imgs div img {
+    width: 70%;
+}
+#product .section-1 .product-imgs .left-img {
+    margin: 0;
+    text-align: left;
+}
+#product .section-1 .product-imgs .right-img {
+    margin: 0;
+    text-align: right;
 }
 
-#product .section-1 .product-imgs div:first-child {
-    position: static;
-    bottom: 0;
+#product .section-1 .product-imgs .right-img img {
+    width: 50%;
 }
-#product .section-1 .product-imgs div:first-child img {
-    position: static;
-    width: 110%;
-}
+
+/*#product .section-1 .product-imgs div:first-child {*/
+    /*position: static;*/
+    /*bottom: 0;*/
+/*}*/
+/*#product .section-1 .product-imgs div:first-child img {*/
+    /*position: static;*/
+    /*width: 110%;*/
+/*}*/
 #product .section-1 .product-imgs .text {
     position: static;
-    margin-top: 0;
-    top: 30px;
+    margin-top: 30px;
+    /*top: 30px;*/
     width: 100%;
-    right: 0;
+    /*right: 0;*/
 }
 #product .section-1 .product-imgs div:nth-child(2) {
-    text-align: center;
+    /*text-align: center;*/
 }
 
 #product .section-2 {
@@ -626,6 +643,7 @@ body {
 }
 #product .section-3 img {
     margin-top: 10px;
+    width: 70%;
 }
 #product .section-4 {
     margin: 0;
@@ -659,6 +677,13 @@ body {
 #product .section-5 {
     margin-top: 0;
 }
+#product .section-5 {
+    height: auto;
+}
+#product .section-5 img {
+    position: static;
+    /*width: 100%;*/
+}
 
 #product .bg-img-2 {
     padding: 0;
@@ -688,7 +713,16 @@ body {
     text-align: left;
 }
 #product .section-7.animation img {
-    width: 100%;
+    width: 70%;
+}
+
+#product .section-7 img.bottom-img {
+    margin-left: -120px;
+}
+
+#product .section-7 a  {
+    position: static;
+    margin: 0 auto;
 }
 
 /*index*/
@@ -1075,5 +1109,26 @@ body {
 
 #order .form-flex .form-addres .field {
     margin-left: 50px;
+}
+
+.ui-fixed-btn {
+    position: fixed;
+    /*width: 100%;*/
+    left: 1em;
+    right: 1em;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: .5em;
+    bottom: 2%;
+    display: block;
+    padding: 8px 16px;
+    border-radius: 3px;
+    color: #fff;
+    background-color: #e2b440;
+    z-index: 99999;
+}
+
+.back-top {
+    bottom: 12%;
 }
 
